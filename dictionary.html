@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<script>
+    let English = ['dog', 'duck', 'cat'];
+    let Vietnamese = ['cho', 'vit', 'meo'];
+    function findByName(keyword) {
+        for (let i = 0; i < English.length; i++){
+            if (English[i] === keyword) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    function search(){
+        let keyword = prompt("Moi nhap tu can tim:");
+        let index = findByName(keyword);
+        if (index != -1){
+            document.write(Vietnamese[index]);
+        } else {
+            document.write('khong tim thay')
+        }
+    }
+
+    search();
+</script>
+</body>
+</html>
